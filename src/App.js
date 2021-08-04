@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   handleSignupOrLogin = () => {
+    //updates user state to userService.getUser
     this.setState({user: userService.getUser()});
   }
 
@@ -36,6 +37,8 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={({ history }) =>
           <HomePage
+            user={this.state.user}
+            handleLogout={this.handleLogout}
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>

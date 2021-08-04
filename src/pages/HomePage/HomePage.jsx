@@ -6,7 +6,9 @@ import './homepage.css';
 const HomePage = (props) => {
     return (
         <div className="HomePage">
-            <NavBar />
+            <NavBar
+                user={props.user}
+                handleLogout={props.handleLogout} />
             <h1>Post One Thing</h1>
             <h5>a social experiment by rennerdigital</h5>
         </div>
