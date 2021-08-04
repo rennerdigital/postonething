@@ -7,7 +7,8 @@ import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import UserPage from './pages/UserPage/UserPage';
 import AboutPage from './pages/AboutPage/AboutPage';
-import ThingsPage from './pages/AboutPage/ThingsPage';
+import ThingsPage from './pages/ThingsPage/ThingsPage';
+import userService from './utils/userService';
 
 class App extends Component {
   constructor () {
@@ -31,7 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className='header-footer'>
-          <Link to='/'>RetroChat.exe</Link>
+          {/* <Link to='/'>RetroChat.exe</Link> */}
         </header>
         <Switch>
           <Route exact path='/' render={() =>
@@ -48,6 +49,9 @@ class App extends Component {
           }/>
           <Route exact path='/login' render={() =>
             <LoginPage />
+          }/>
+            <Route exact path='/all' render={() =>
+            <ThingsPage />
           }/>
         </Switch>
       </div>
