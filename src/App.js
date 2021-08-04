@@ -34,23 +34,35 @@ class App extends Component {
           {/* <Link to='/'>RetroChat.exe</Link> */}
         </header>
         <Switch>
-          <Route exact path='/' render={() =>
-          <HomePage />
+          <Route exact path='/' render={({ history }) =>
+          <HomePage
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
-          <Route exact path='/user' render={() =>
-          <UserPage />
+          <Route exact path='/user' render={({ history }) =>
+          <UserPage
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
-          <Route exact path='/about' render={() =>
-            <AboutPage />
+          <Route exact path='/about' render={({ history }) =>
+            <AboutPage
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
-          <Route exact path='/signup' render={() =>
-            <SignupPage />
+          <Route exact path='/signup' render={({ history }) =>
+            <SignupPage
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
-          <Route exact path='/login' render={() =>
-            <LoginPage />
+          <Route exact path='/login' render={({ history }) =>
+            <LoginPage
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
-            <Route exact path='/all' render={() =>
-            <ThingsPage />
+            <Route exact path='/all' render={({ history }) =>
+            <ThingsPage
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
         </Switch>
       </div>
