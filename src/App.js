@@ -8,6 +8,9 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import UserPage from './pages/UserPage/UserPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ThingsPage from './pages/ThingsPage/ThingsPage';
+import CreatePage from './pages/CreatePage/CreatePage';
+import UpdatePage from './pages/UpdatePage/UpdatePage';
+import DeletePage from './pages/DeletePage/DeletePage';
 import userService from './utils/userService';
 
 class App extends Component {
@@ -61,11 +64,8 @@ class App extends Component {
             user={this.state.user}
             handleLogout={this.handleLogout}
             history={history}
-            handleSignupOrLogin={this.handleSignupOrLogin} 
-            handlePostUpdateOrCreate={this.handlePostUpdateOrCreate}
-            handleCreate={this.handleCreate}
-            handleUpdate={this.handleUpdate}
-            handleDelete={this.handleDelete} />
+            handleSignupOrLogin={this.handleSignupOrLogin}
+            posts={this.state.post} />
           }/>
           <Route exact path='/about' render={({ history }) =>
             <AboutPage
@@ -90,6 +90,27 @@ class App extends Component {
           }/>
             <Route exact path='/all' render={({ history }) =>
             <ThingsPage
+              user={this.state.user}
+              handleLogout={this.handleLogout}
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin} />
+          }/>
+            <Route exact path='/user/create' render={({ history }) =>
+            <CreatePage
+              user={this.state.user}
+              handleLogout={this.handleLogout}
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin} />
+          }/>
+            <Route exact path='/user/update' render={({ history }) =>
+            <UpdatePage
+              user={this.state.user}
+              handleLogout={this.handleLogout}
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin} />
+          }/>
+            <Route exact path='/user/del' render={({ history }) =>
+            <DeletePage
               user={this.state.user}
               handleLogout={this.handleLogout}
               history={history}

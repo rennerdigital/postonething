@@ -4,7 +4,8 @@ const PostSchema = new mongoose.Schema(
 {
         desc:{
             type:String,
-            max:1000
+            max:1000,
+            required: true
         },
 },
     { timestamps: true }
