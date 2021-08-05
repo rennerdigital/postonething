@@ -1,11 +1,15 @@
 import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 
-export default function ThingsPage() {
+const ThingsPage = (props) => {
     return (
         <div>
-            <NavBar />
-            <h1>Things Page</h1>
+            <NavBar
+                user={props.user}
+                handleLogout={props.handleLogout} />
+            <h1>All the Things</h1>
         </div>
     )
 };
+
+export default ThingsPage;

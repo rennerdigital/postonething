@@ -44,26 +44,36 @@ class App extends Component {
           }/>
           <Route exact path='/user' render={({ history }) =>
           <UserPage
+            user={this.state.user}
+            handleLogout={this.handleLogout}
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
           <Route exact path='/about' render={({ history }) =>
             <AboutPage
+            user={this.state.user}
+            handleLogout={this.handleLogout}
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
           <Route exact path='/signup' render={({ history }) =>
             <SignupPage
+            user={this.state.user}
+            handleLogout={this.handleLogout}
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
           <Route exact path='/login' render={({ history }) =>
             <LoginPage
+              user={this.state.user}
+              handleLogout={this.handleLogout}
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
             <Route exact path='/all' render={({ history }) =>
             <ThingsPage
+              user={this.state.user}
+              handleLogout={this.handleLogout}
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>

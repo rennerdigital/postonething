@@ -1,0 +1,15 @@
+.yourthing {
+    color: chartreuse;
+}
+
+::placeholder {
+    color: black;
+}
+
+button {
+    color: chartreuse;
+}
+
+.buttons {
+    padding: 20px;
+}

@@ -1,4 +1,4 @@
-.AboutPage {
+.aboutText {
     color: chartreuse;
     line-height: 30px;
 }
@@ -6,3 +6,12 @@
 a {
     color: chartreuse;
 }
+
+.NavBar-welcome {
+    color: chartreuse;
+}
+
+h1, h3 {
+    color: black;
+}
+
