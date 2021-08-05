@@ -14,6 +14,8 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
+      page: "post",
+      post: null,
       user: userService.getUser()
     };
   }
@@ -27,6 +29,18 @@ class App extends Component {
     //updates user state to userService.getUser
     this.setState({user: userService.getUser()});
   }
+
+  handlePostUpdateOrCreate = (newPost) => {
+    this.setState({ post: newPost, page: "post" });
+  };
+
+  handleUpdate = () => {
+    this.setState({ page: "update" });
+  };
+  handleCreate = () => {
+    this.setState({ page: "create" });
+  };
+  handleDelete = () => {};
 
   render() {
     return (
@@ -47,7 +61,11 @@ class App extends Component {
             user={this.state.user}
             handleLogout={this.handleLogout}
             history={history}
-            handleSignupOrLogin={this.handleSignupOrLogin} />
+            handleSignupOrLogin={this.handleSignupOrLogin} 
+            handlePostUpdateOrCreate={this.handlePostUpdateOrCreate}
+            handleCreate={this.handleCreate}
+            handleUpdate={this.handleUpdate}
+            handleDelete={this.handleDelete} />
           }/>
           <Route exact path='/about' render={({ history }) =>
             <AboutPage

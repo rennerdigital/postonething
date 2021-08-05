@@ -10,7 +10,6 @@ const UserPage = (props) => {
                 user={props.user}
                 handleLogout={props.handleLogout} />
             <h1>Your One Thing</h1>
-            <form>
             <textarea rows="4" cols="100" placeholder="post your one thing here..." className="yourthing" />
             <div className="buttons">
             <button>Post My One Thing</button>
@@ -21,7 +20,7 @@ const UserPage = (props) => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link to='/'>Cancel</Link>
             </div>
-            </form>
+            
         </div>
 
     )
