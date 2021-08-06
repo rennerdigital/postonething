@@ -6,7 +6,7 @@ class UpdateForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        title: props.post.title
+        // title: props.post.title
       };
     }
   
@@ -24,15 +24,16 @@ class UpdateForm extends React.Component {
     render() {
       return (
         <div>
-          Update
           <form onSubmit={this.handleSubmit}>
-            <label>Name</label>
+            <label></label>
             <input
               name="title"
               value={this.state.title}
               onChange={this.handleChange}
             />
-            <button type="submit">create</button>
+            <br></br>
+            <br></br>
+            <button type="submit">Update My One Thing</button>
           </form>
         </div>
       );

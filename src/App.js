@@ -37,12 +37,6 @@ class App extends Component {
     this.setState({ post: newPost, page: "post" });
   };
 
-  handleUpdate = () => {
-    this.setState({ page: "update" });
-  };
-  handleCreate = () => {
-    this.setState({ page: "create" });
-  };
   handleDelete = () => {};
 
   render() {

@@ -10,7 +10,13 @@ const UserPage = (props) => {
                 user={props.user}
                 handleLogout={props.handleLogout} />
             <h1>Your One Thing</h1>
-            {/* <h5>{this.state.post.desc}</h5> */}
+            {/* Code to display post goes here */}
+            {/* <h5>{this.state.post.title}</h5> */}
+            {/* {this.state.page === "post" && (
+            <h1>
+              {this.state.post ? this.state.post.title : "Create a new Post"}
+            </h1>
+            )} */}
             <div className="buttons">
             <Link to='/user/create' className='NavBar-link'>Create</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;

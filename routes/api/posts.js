@@ -4,9 +4,9 @@ const Post = require("../../models/post");
 const postsCtrl = require("../../controllers/posts.js")
 
 // Public
-router.post('/user', postsCtrl.create)
-router.put('/user', postsCtrl.update)
-router.delete('/user', postsCtrl.delete);
+router.post('/create', postsCtrl.create)
+router.put('/user/update', postsCtrl.update)
+router.delete('/user/del', postsCtrl.delete);
 
 // Protected
 

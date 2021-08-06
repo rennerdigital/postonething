@@ -1,14 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react';
 import NavBar from '../../components/NavBar/NavBar'
+import CreateForm from '../../components/CreateForm/CreateForm';
 import { Link } from 'react-router-dom';
 
-export default function CreatePage(props) {
-    return (
+class CreatePage extends Component {
+    constructor(props) {
+      super(props);
+      this.state = { title: "" }
+    }
+  
+    // updateMessage = (msg) => {
+    //   this.setState({message: msg});
+    // }
+  
+    render(props) {
+      return (
+       <> 
         <div>
+            
             <NavBar
-                user={props.user}
-                handleLogout={props.handleLogout} />
+                user={this.props.user}
+                handleLogout={this.props.handleLogout} />
             <h1>Create Your One Thing</h1>
+            <CreateForm {...props}/>
         </div>
-    )
-}
+        </>
+      );
+    }
+  }
+  
+  export default CreatePage;

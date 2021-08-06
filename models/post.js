@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const PostSchema = new mongoose.Schema(
 {
-        desc:{
+        title:{
             type:String,
             max:1000,
             required: true
