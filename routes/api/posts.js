@@ -5,8 +5,9 @@ const postsCtrl = require("../../controllers/posts.js")
 
 // Public
 router.post('/create', postsCtrl.create)
-router.put('/user/update', postsCtrl.update)
-router.delete('/user/del', postsCtrl.delete);
+router.put('/update', postsCtrl.update)
+router.delete('/del', postsCtrl.delete)
+router.get('/all', postsCtrl.getAllPosts)
 
 // Protected
 

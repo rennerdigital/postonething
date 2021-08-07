@@ -4,6 +4,7 @@ module.exports = {
     create,
     update,
     delete: deleteOne,
+    getAllPosts
 };
 
 async function create(req, res) {
@@ -19,6 +20,19 @@ async function deleteOne(req, res) {
 async function update(req, res) {
     const updatedPost = await Post.findByIdAndUpdate(req.params.id, req.body, {new: true});
     res.status(200).json(updatedPost);
+}
+
+async function getAllPosts(req, res) {
+    const allPosts = Post.find({}, function(err, result) {
+        if (err) {
+          console.log(err);
+        } else {
+          return res.json(result);
+        }
+      });
+    
+    // const allPosts = await Post.(req.params.id, req.body, {new: true});
+    res.status(200).json(allPost);
 }
 
 

@@ -1,15 +1,47 @@
-import React from 'react'
-import NavBar from '../../components/NavBar/NavBar'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import postService from '../../utils/postService';
 
-const ThingsPage = (props) => {
-    return (
-        <div>
-            <NavBar
-                user={props.user}
-                handleLogout={props.handleLogout} />
-            <h1>All the Things</h1>
-        </div>
-    )
-};
+class ThingsPage extends Component {
+    constructor(props) {
+      super(props);
+      this.state = { title: "", allposts: [] }
+    }
+  
+    componentDidMount = async () => {
+        const post2 = await postService.getAll();
+        // console.log(post2)
+        
 
-export default ThingsPage;
+        let arrayPosts = []
+
+        for (let item in post2){
+            arrayPosts.push(post2[`${item}`]);
+        }
+
+        this.setState ({
+            allposts:arrayPosts
+        })
+
+        console.log(this.state.allposts)
+      }
+
+      render() {
+        return (
+          <div>
+            <h1>All Things</h1>
+            
+                {this.state.allposts.map ((item)=>(
+                    <li>
+                        {item.title}
+                    </li>
+                ))}
+            
+          </div>
+        );
+      }
+    } 
+
+
+  
+  export default ThingsPage;

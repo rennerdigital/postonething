@@ -82,7 +82,7 @@ class App extends Component {
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin} />
           }/>
-            <Route exact path='/all' render={({ history }) =>
+            <Route exact path='/user/all' render={({ history }) =>
             <ThingsPage
               user={this.state.user}
               handleLogout={this.handleLogout}

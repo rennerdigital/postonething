@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 import { Link } from 'react-router-dom';
 import "./userpage.css"
+// const Post = require("../../models/post");
 
 const UserPage = (props) => {
     return (

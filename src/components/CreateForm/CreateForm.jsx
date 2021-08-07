@@ -9,12 +9,19 @@ class CreateForm extends React.Component {
   }
   
   state = { title: "" };
+
+    // componentDidMount = async () => {
+    //   const post2 = await postService.getAll();
+    //   console.log(post2)
+    // }
   
     handleSubmit = async (e) => {
       e.preventDefault();
       // grab all the data from the state
       // send that to the server
       const post = await postService.create(this.state);
+      // const post = await postService.getAll();
+      // console.log(post)
       // this.props.handlePostCreate(post);
     };
 
