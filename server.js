@@ -18,10 +18,11 @@ app.use(express.json());
 // Configure both serve-favicon & static middlewares
 // to serve from the production 'build' folder
 
-if(process.env.NODE_ENV === 'production'){
+//commenting out 21 and 24 for heroku deploy - switch back for local
+// if(process.env.NODE_ENV === 'production'){
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
-}
+// }
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'))
