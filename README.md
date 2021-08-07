@@ -38,6 +38,12 @@
 
 Access the app via [Heroku](https://postonething.herokuapp.com/).
 
+## First Patch (Post 1.1 Thing?)
+- Pass the post's state to the user/update/delete pages
+- Protect Routes
+- Conditional button add and removal
+
+
 ## Next Steps
 - Moderator to filter out bad words and expressions
 - "Theme of the Day"
