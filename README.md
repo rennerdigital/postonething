@@ -1,11 +1,11 @@
 <img src="https://i.imgur.com/15cn8e0.png">
 
-# [Post One Thing](#) - the least social network on Earth.
+# [Post One Thing](https://postonething.herokuapp.com/) - the least social network on Earth.
 
 ## Planning
-### [Trello Board](#)
+### [Trello Board](https://trello.com/b/ag0qPUHO/post-one-thing)
 
-### [ERD Chart](#)
+### [ERD Chart](https://lucid.app/lucidchart/47abfa66-4602-4baa-8fe7-5e1872e4007b/edit?viewport_loc=-11%2C-56%2C2219%2C1065%2C0_0)
 
 ### Conceptual Designs
 - Minimalist
@@ -36,9 +36,7 @@
 
 ## Post Your One Thing!
 
-Access the app via [Heroku](#).
-
-Take a look at the [repo] (#) as well.
+Access the app via [Heroku](https://postonething.herokuapp.com/).
 
 ## Next Steps
 - Moderator to filter out bad words and expressions
