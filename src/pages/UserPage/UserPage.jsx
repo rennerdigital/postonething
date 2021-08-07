@@ -10,7 +10,7 @@ const UserPage = (props) => {
             <NavBar
                 user={props.user}
                 handleLogout={props.handleLogout} />
-            <h1>Your One Thing</h1>
+            <h1>My One Thing</h1>
             {/* Code to display post goes here */}
             {/* <h5>{this.state.post.title}</h5> */}
             {/* {this.state.page === "post" && (
