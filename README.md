@@ -1,4 +1,4 @@
-<div style="text-align:center"><img src="https://i.imgur.com/15cn8e0.png">
+<img src="https://i.imgur.com/15cn8e0.png">
 
 ### As a user, I want to share my thoughts with the world, anonymously.
 
