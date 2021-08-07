@@ -1,14 +1,6 @@
-# <img src="https://i.imgur.com/15cn8e0.png">
+<img src="https://i.imgur.com/15cn8e0.png">
 
-### As a user, I want to share my thoughts with the world, anonymously.
-
-### As a user, I want to read everyone else's thoughts.
-
-### As the developer pretending to be a user, I want a minimalistic app that satisfies all requirements of the unit 4 project.
-
-### As a user, the guy who made the comment above is weird. I want to post about how weird he is without him knowing who I am.
-
-### [Post One Thing](#) - the least social network on Earth.
+# [Post One Thing](#) - the least social network on Earth.
 
 ## Planning
 ### [Trello Board](#)
