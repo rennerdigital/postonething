@@ -9,6 +9,8 @@ class UpdatePage extends Component {
         this.state = { title: "" }
     }
 
+    // update={this.props.history.location.query.update}
+
     render(props) {
         return (
             <>

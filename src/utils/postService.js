@@ -9,16 +9,16 @@ async function create(post) {
   // (res.json)
 }
 
-function update(post) {
-  return fetch(BASE_URL + '/update', {
+function update(id, title) {
+  return fetch(BASE_URL + `/update/${id}`, {
     method: 'PUT',
     headers: {'content-type': 'application/json'},
-    body: JSON.stringify(post)
+    body: JSON.stringify({title})
   }).then(res => (res.json()));
 }
 
-function deleteOne(post) {
-  return fetch(BASE_URL + '/del', {
+function deleteOne(id) {
+  return fetch(BASE_URL + `/del/${id}`, {
     method: 'DELETE',
   }).then(res => (res.json()));
 }
@@ -32,9 +32,18 @@ async function getAll() {
   // (res.json)
 }
 
+async function getUserPosts(id) {
+  return await fetch(BASE_URL + `/posts/${id}`, {
+    method: 'GET',
+    headers: {'content-type': 'application/json'},
+  }).then(res => (res.json()));
+  // (res.json)
+}
+
 export default {
   create, 
   update,
   deleteOne,
-  getAll
+  getAll,
+  getUserPosts
 };

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import postService from '../../utils/postService';
+import tokenService from '../../utils/tokenService';
 
 class CreateForm extends React.Component {
   
@@ -8,21 +8,21 @@ class CreateForm extends React.Component {
     super(props)
   }
   
-  state = { title: "" };
+  state = { title: "", userId: "" };
 
-    // componentDidMount = async () => {
-    //   const post2 = await postService.getAll();
-    //   console.log(post2)
-    // }
+    componentDidMount() {
+      let getUser = tokenService.getUserFromToken();
+      this.setState({userId: getUser._id})
+    }
   
     handleSubmit = async (e) => {
       e.preventDefault();
       // grab all the data from the state
       // send that to the server
       const post = await postService.create(this.state);
-      // const post = await postService.getAll();
-      // console.log(post)
-      // this.props.handlePostCreate(post);
+      if(post.title){
+        window.location.href = "/user";
+      }
     };
 
     handleChange = (e) => this.setState({ [e.target.name]: e.target.value });

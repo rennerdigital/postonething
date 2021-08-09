@@ -4,7 +4,8 @@ module.exports = {
     create,
     update,
     delete: deleteOne,
-    getAllPosts
+    getAllPosts,
+    getUserPosts
 };
 
 async function create(req, res) {
@@ -32,7 +33,21 @@ async function getAllPosts(req, res) {
       });
     
     // const allPosts = await Post.(req.params.id, req.body, {new: true});
-    res.status(200).json(allPost);
+    res.status(200).json(allPosts);
+}
+
+async function getUserPosts(req, res) {
+  const { userId } = req.params;
+  const userPosts = Post.find({userId}, function(err, result) {
+      if (err) {
+        console.log(err);
+      } else {
+        return res.json(result);
+      }
+    });
+  
+  // const allPosts = await Post.(req.params.id, req.body, {new: true});
+  res.status(200).json(userPosts);
 }
 
 
