@@ -13,3 +13,5 @@ router.get('/posts/:userId', postsCtrl.getUserPosts)
 // Protected
 
 module.exports = router;
+
+
