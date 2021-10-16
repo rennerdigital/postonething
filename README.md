@@ -1,6 +1,7 @@
 <img src="https://i.imgur.com/15cn8e0.png">
 
 # [Post One Thing](https://postonething.herokuapp.com/) - the least social network on Earth. Capstone project #4 for General Assembly's Software Engineering program.
+### *please note this app is not yet optimized for mobile phones
 
 ## Planning
 ### [Trello Board](https://trello.com/b/ag0qPUHO/post-one-thing)
